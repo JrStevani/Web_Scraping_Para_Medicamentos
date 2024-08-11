@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição do Projeto - Captura de Dados de Medicamentos</title>
+    <style>
+        body {
+             font-family: Arial, sans-serif;
+             line-height: 1.6;
+             background-color: #f4f4f4;
+             color: #333;
+             padding: 15px;
+         }
+         main {
+             padding: 15px;
+             margin: -30px auto auto auto;
+             width: 90vw;
+             max-width: 1200px;
+             background-color: #fff;
+             border: 1px solid #ccc;
+             box-shadow: 2px 2px 5px rgba(62, 62, 62, 0.775);
+             border-radius: 8px;
+             text-align: justify;
+         }
+ 
+         h1, h2, h3 {
+             color: #333;
+         }
+         ul {
+             list-style-type: disc;
+             margin-left: 20px;
+         }
+         code {
+             background: #f4f4f4;
+             padding: 2px 4px;
+             border-radius: 4px;
+         }
+         .project-image {
+             max-width: 100%;
+             height: auto;
+             margin: 20px 0;
+             border-radius: 8px;
+             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+         }
+         a {
+             text-decoration: none;
+             color: black;
+         }
+         a:hover {
+             text-decoration: underline;
+             color: #333;
+         }
+         @media (max-width: 768px) {
+             * {
+                 text-align: justify;
+                 font-family: Arial, Helvetica, sans-serif;
+             }
+             body {
+                 margin: auto;
+                 text-align: center;
+             }
+             main {
+                 width: 83vw;
+                 margin: -40px auto auto auto;
+             }
+             h1 {
+                 font-size: 1em;
+             }
+             h2 {
+                 font-size: 0.9em;
+             }
+             h3 {
+                 font-size: 0.8em;
+             }
+             p {
+                 font-size: 0.8em;
+             }
+             
+             img {
+                 width: 80vw;
+             }
+         }
+         @media (max-width: 480px) {
+             body {
+                 text-align: center;
+             }
+             main {
+                 width: 85vw;
+                 margin: -20px auto auto auto;
+             }
+             h1 {
+                 font-size: 1em;
+             }
+             h2 {
+                 font-size: 0.9em;
+             }
+             h3 {
+                 font-size: 0.8em;
+             }
+             p {
+                 font-size: 0.8em;
+             }
+ 
+             img {
+                 width: 70vw;
+             }
+         }
+     </style>
+</head>
+<body>
+    <main>
+        <h1>Captura de Dados de Medicamentos</h1>
+        <p>Este projeto consiste na captura automatizada de dados de medicamentos utilizando web scraping de dois sites diferentes: <a href="https://pro.consultaremedios.com.br" target="_blank">Consulta Remédios</a> e <a href="https://farmaindex.com" target="_blank">Farmaindex</a>. Abaixo estão descritas as funções principais de cada um dos scripts.</p>
+
+        <div class="script-section">
+            <h2>Primeiro Script: Captura de Dados do Consulta Remédios</h2>
+            <h3>Imagem do site</h3>
+            <img src="imagens/p1_tela_inicial.PNG" alt="Tela inicial do site">
+            <p>Este script realiza a captura de dados de medicamentos a partir do site Consulta Remédios, utilizando as seguintes funções:</p>
+            <ul>
+                <li><strong>captura_de_dados(row, col)</strong>: Função responsável por realizar a solicitação ao site e extrair informações como apresentação, medicamento, princípio ativo e fabricante. Em caso de falha na solicitação, a função retorna valores vazios.</li>
+                <li><strong>Aplicação dos Dados</strong>: O script aplica a função <code>captura_de_dados</code> a cada linha de um arquivo Excel, armazenando os dados capturados em novas colunas e, em seguida, salvando os resultados em um novo arquivo Excel.</li>
+            </ul>
+            <div><img src="imagens/p1_dados.PNG" alt="Exemplo de Captura de Dados do Consulta Remédios" class="project-image"></div>
+        </div>
+
+        <div class="script-section">
+            <h2>Segundo Script: Captura de Dados do Farmaindex</h2>
+            <h3>Imagem do site</h3><img src="imagens/p2_tela_inicial.PNG" alt="">
+            <p>Este script realiza a captura de dados de medicamentos a partir do site Farmaindex, utilizando as seguintes funções:</p>
+            <ul>
+                <li><strong>captura_de_dados(row, col)</strong>: Função que realiza a solicitação ao site Farmaindex e extrai as mesmas informações de medicamentos. Caso o medicamento seja encontrado, a função captura e retorna os dados; se não, retorna valores vazios.</li>
+                <li><strong>Aplicação dos Dados</strong>: Assim como o primeiro script, este aplica a função <code>captura_de_dados</code> a um arquivo Excel, adiciona as informações capturadas a novas colunas, e salva o resultado em um arquivo Excel separado.</li>
+            </ul>
+            <div><img src="imagens/p2_dados.PNG" alt="Exemplo de Captura de Dados do Farmaindex" class="project-image"></div>
+        </div>
+
+        <h2>Tecnologias Utilizadas</h2>
+        <ul>
+            <li><strong><a href="https://www.python.org/" target="_blank">Python</a></strong>: Linguagem principal utilizada para automação e manipulação de dados.</li>
+            <li><strong><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></strong>: Biblioteca essencial para manipulação de dados em estruturas DataFrame.</li>
+            <li><strong><a href="https://requests.readthedocs.io/en/latest/" target="_blank">Requests</a></strong>: Biblioteca usada para realizar solicitações HTTP.</li>
+            <li><strong><a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">BeautifulSoup</a></strong>: Biblioteca usada para fazer o parsing de HTML e extrair dados.</li>
+            <li><strong><a href="https://openpyxl.readthedocs.io/en/stable/" target="_blank">Openpyxl</a></strong>: Biblioteca usada para leitura e escrita de arquivos Excel.</li>
+        </ul>
+    </main>
+</body>
+</html>

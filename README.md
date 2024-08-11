@@ -1,5 +1,7 @@
 # Web_Scraping_Para_Medicamentos
 
+<a href="">Projeto detalhado</a>
+
 <strong>Descrição do Projeto: Captura e Análise de Dados de Medicamentos</strong>
 
 Este projeto visa capturar e analisar dados de medicamentos a partir dos sites "Consulta Remédios" e "Farmaindex" utilizando Python. Através de uma combinação de web scraping com as bibliotecas <strong>`BeautifulSoup`</strong> e requisições HTTP com a biblioteca <strong>`requests`</strong>, os scripts buscam informações detalhadas sobre medicamentos com base em seus códigos EAN presentes em um arquivo Excel. 
