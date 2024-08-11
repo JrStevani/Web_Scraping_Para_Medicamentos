@@ -1,6 +1,6 @@
 # Web_Scraping_Para_Medicamentos
 
-<a href="">Projeto detalhado</a>
+<a href="https://jrstevani.github.io/Web_Scraping_Para_Medicamentos/">Projeto detalhado</a>
 
 <strong>Descrição do Projeto: Captura e Análise de Dados de Medicamentos</strong>
 
