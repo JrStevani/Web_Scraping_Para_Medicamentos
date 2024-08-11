@@ -116,7 +116,7 @@
         <div class="script-section">
             <h2>Primeiro Script: Captura de Dados do Consulta Remédios</h2>
             <h3>Imagem do site</h3>
-            <img src="imagens/p1_tela_inicial.PNG" alt="Tela inicial do site">
+            <div><img src="imagens/p1_tela_inicial.PNG" alt="Tela inicial do site"></div>
             <p>Este script realiza a captura de dados de medicamentos a partir do site Consulta Remédios, utilizando as seguintes funções:</p>
             <ul>
                 <li><strong>captura_de_dados(row, col)</strong>: Função responsável por realizar a solicitação ao site e extrair informações como apresentação, medicamento, princípio ativo e fabricante. Em caso de falha na solicitação, a função retorna valores vazios.</li>
@@ -127,7 +127,9 @@
 
         <div class="script-section">
             <h2>Segundo Script: Captura de Dados do Farmaindex</h2>
-            <h3>Imagem do site</h3><img src="imagens/p2_tela_inicial.PNG" alt="">
+            <div>
+                <h3>Imagem do site</h3><img src="imagens/p2_tela_inicial.PNG" alt="">
+            </div>
             <p>Este script realiza a captura de dados de medicamentos a partir do site Farmaindex, utilizando as seguintes funções:</p>
             <ul>
                 <li><strong>captura_de_dados(row, col)</strong>: Função que realiza a solicitação ao site Farmaindex e extrai as mesmas informações de medicamentos. Caso o medicamento seja encontrado, a função captura e retorna os dados; se não, retorna valores vazios.</li>
